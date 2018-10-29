@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFL-lP-ijK">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFL-lP-ijK" userLabel="cardContainer">
                                 <rect key="frame" x="36" y="177" width="343" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brasilia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30T-ve-HTO" userLabel="Back Label">
-                                        <rect key="frame" x="42" y="18" width="259" height="201"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="236"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.82745098039999998" green="0.98039215690000003" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -30,9 +30,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's the Capital of Brazil?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVu-AW-rJ8" userLabel="Front Label">
-                                        <rect key="frame" x="42" y="18" width="259" height="201"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="236"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.82745098039999998" green="0.98039215690000003" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.36860414941408448" green="0.5832475706323943" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -44,12 +44,40 @@
                                     <outletCollection property="gestureRecognizers" destination="MbP-fQ-ZmX" appends="YES" id="G0x-eu-s6g"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMN-Zw-NfD" userLabel="btnOptionOne">
+                                <rect key="frame" x="74" y="500" width="265" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sao Paulo"/>
+                                <connections>
+                                    <action selector="didTapOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="is3-d9-CVD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S86-zh-xTp" userLabel="btnOptionTwo">
+                                <rect key="frame" x="74" y="572" width="265" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Brasillias"/>
+                                <connections>
+                                    <action selector="didTapOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AK9-gq-l2i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWE-CL-pxR" userLabel="btnOptionThree">
+                                <rect key="frame" x="74" y="643" width="265" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Rio De Janeiro"/>
+                                <connections>
+                                    <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9e-eB-DbF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="30T-ve-HTO" id="8Cz-1t-P89"/>
+                        <outlet property="btnOptionOne" destination="NMN-Zw-NfD" id="Id3-0t-6Nf"/>
+                        <outlet property="btnOptionThree" destination="cWE-CL-pxR" id="asR-ie-XU3"/>
+                        <outlet property="btnOptionTwo" destination="S86-zh-xTp" id="4js-QW-LCO"/>
+                        <outlet property="card" destination="PFL-lP-ijK" id="HSW-x4-CGD"/>
                         <outlet property="frontLabel" destination="sVu-AW-rJ8" id="jqK-eF-ieD"/>
                     </connections>
                 </viewController>
@@ -60,7 +88,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-76" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-76.811594202898561" y="133.25892857142856"/>
         </scene>
     </scenes>
 </document>
