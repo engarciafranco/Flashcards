@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+   var flashcardsController: ViewController!
+    
     
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var backLabel: UILabel!
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOptionOne: UIButton!
     @IBOutlet weak var btnOptionTwo: UIButton!
     @IBOutlet weak var btnOptionThree: UIButton!
+    @IBOutlet weak var createQuestionBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,12 @@ class ViewController: UIViewController {
         btnOptionThree.layer.borderWidth = 3.0
         btnOptionThree.layer.borderColor = #colorLiteral(red: 0.4378522635, green: 0.6547383666, blue: 0.8708304763, alpha: 1)
         btnOptionThree.layer.cornerRadius = 15.0
+        
+        createQuestionBtn.layer.cornerRadius = 25.0
+        createQuestionBtn.layer.shadowRadius = 8.0
+        createQuestionBtn.layer.shadowOpacity = 0.2
+        
+        
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
@@ -64,6 +73,21 @@ class ViewController: UIViewController {
     
     @IBAction func didTapOptionThree(_ sender: Any) {
         btnOptionThree.isHidden = true
+    }
+    
+    func updateFlashcard(question: String, answer: String) {
+        frontLabel.text = question
+        backLabel.text = answer
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let navigationController = segue.destination as! UINavigationController
+        
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
     }
     
     

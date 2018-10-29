@@ -68,6 +68,17 @@
                                     <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9e-eB-DbF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUm-gd-cqe">
+                                <rect key="frame" x="301" y="769" width="49" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36860414940000003" green="0.58324757059999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G0h-Qf-Ys7" kind="show" id="brg-rC-2Y7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -78,6 +89,7 @@
                         <outlet property="btnOptionThree" destination="cWE-CL-pxR" id="asR-ie-XU3"/>
                         <outlet property="btnOptionTwo" destination="S86-zh-xTp" id="4js-QW-LCO"/>
                         <outlet property="card" destination="PFL-lP-ijK" id="HSW-x4-CGD"/>
+                        <outlet property="createQuestionBtn" destination="rUm-gd-cqe" id="Goq-5M-Hv0"/>
                         <outlet property="frontLabel" destination="sVu-AW-rJ8" id="jqK-eF-ieD"/>
                     </connections>
                 </viewController>
@@ -89,6 +101,71 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-76.811594202898561" y="133.25892857142856"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="peI-wG-TNr">
+            <objects>
+                <viewController id="mdh-mq-9fa" customClass="CreationViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ko-xs-Se3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQE-qb-Rof">
+                                <rect key="frame" x="57" y="152" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-rx-Bwp">
+                                <rect key="frame" x="57" y="211" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UpK-jV-hsU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Um6-Mm-fpB">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="S7x-TZ-Plv">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="mdh-mq-9fa" id="jS6-pB-5fG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="QQA-aO-dBx">
+                            <connections>
+                                <action selector="didTapDone:" destination="mdh-mq-9fa" id="8H6-ZT-kL1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="foQ-rx-Bwp" id="SLD-g0-B04"/>
+                        <outlet property="questionTextField" destination="oQE-qb-Rof" id="5c6-VF-bD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qvv-yN-QCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1518.840579710145" y="133.92857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c84-C7-Yc6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G0h-Qf-Ys7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gje-gP-wp6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mdh-mq-9fa" kind="relationship" relationship="rootViewController" id="enU-Hu-c85"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkn-2V-0n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="134"/>
         </scene>
     </scenes>
 </document>

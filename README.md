@@ -20,6 +20,11 @@ When you tap on the wrong answer, the respective button dissapears. If the corre
 
 <img src="http://g.recordit.co/4DA0gWPHpL.gif" width=200><br>
 
+UPDATE: 10-28-18 Version 0.1.1 
+Users can now create their own flashcards
+
+<img src="http://g.recordit.co/EveV6b06cm.gif" width=200><br>
+
 
 ## Required
 - [x] Create New Project in Xcode
@@ -27,6 +32,7 @@ When you tap on the wrong answer, the respective button dissapears. If the corre
 - [x] Add a view for the back side of the flashcard to display the answer
 - [x] Build in logic to show the answer side when the card is tapped
 - [x] Push code to GitHub
+- [x] Allow users to create their own flashcard
 ## Optional
 - [x] Toggle the flashcard between the question side and the answer side
 - [x] Style the question and answer side of the card to better distinguish between the two sides
