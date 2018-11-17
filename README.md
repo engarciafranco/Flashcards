@@ -1,4 +1,26 @@
 ## Flashcards App
+## Lab 3
+
+### App Description
+An app which helps you study using flahscards. In this update, the ability to browse through multiple flashcards was added. Additionally, flashcards can be saved and won't dissapear after exiting the app. 
+
+### App Walk-though
+
+The user can add new flashcards and browse between them. 
+<img src="http://g.recordit.co/15PM1PmwVt.gif" width=200><br>
+
+The user can now also edit existing cards
+<img src="http://g.recordit.co/2eg6hPN5rH.gif" width=200><br>
+
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [ ] User can delete a flashcard
+- [x] User can edit existing flashcard
+- [ ] User can store multiple choice questions
 ## Lab 2
 
 ### App Description
