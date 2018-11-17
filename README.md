@@ -7,9 +7,11 @@ An app which helps you study using flahscards. In this update, the ability to br
 ### App Walk-though
 
 The user can add new flashcards and browse between them. 
+
 <img src="http://g.recordit.co/15PM1PmwVt.gif" width=200><br>
 
 The user can now also edit existing cards
+
 <img src="http://g.recordit.co/2eg6hPN5rH.gif" width=200><br>
 
 
