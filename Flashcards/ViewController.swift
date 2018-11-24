@@ -86,14 +86,45 @@ class ViewController: UIViewController {
         
     }
     
-    // Mutilpe Choice Options
+    // Card Animations
     
+    func flipFlashcard() {
+        frontLabel.isHidden = true
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.frontLabel.isHidden = true
+        })
+    }
+    
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300, y: 0.0)
+        }, completion: { finished in
+            
+            // Update labels
+            self.updateLabels()
+            
+            // Run other animation
+            self.animateCardIn()
+        })
+    }
+    
+    func animateCardIn() {
+        // Bring card from right side
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300, y: 0.0)
+        
+        // Animate card going back to it's original spot
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
+    
+    // Mutilpe Choice Options
     @IBAction func didTapOptionOne(_ sender: Any) {
         btnOptionOne.isHidden = true
     }
     
     @IBAction func didTapOptionTwo(_ sender: Any) {
-        frontLabel.isHidden = true
+        flipFlashcard()
         btnOptionTwo.layer.borderColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
     }
     
@@ -106,22 +137,20 @@ class ViewController: UIViewController {
         // Increase current index
         currentIndex = currentIndex + 1
         
-        // Update labels
-        updateLabels()
-        
         // Update buttons
         updateNextPrevButtons()
+        
+        animateCardOut()
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
         // Increase current index
         currentIndex = currentIndex - 1
         
-        // Update labels
-        updateLabels()
-        
         // Update buttons
         updateNextPrevButtons()
+        
+        animateCardOut()
     }
     
     // Update Labels Function

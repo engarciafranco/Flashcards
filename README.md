@@ -1,4 +1,30 @@
 ## Flashcards App
+## Lab 4
+
+### App Description
+An app which helps you study using flahscards. In this update: An app icon, a splashscreen, and animations have been added to enchance  the user experience, adding an additional layer of polish to the app. 
+
+### App Walk-though
+An app icon, a splashscreen, and animations have been added to enchance  the user experience, adding an additional layer of polish to the app. 
+
+When clicking the next and previous button, the card animates out and back into the main view. When chosing the correct answer, the card flips to the correct answer side. 
+
+<img src="http://g.recordit.co/6wqAmqQlmE.gif" width=200><br>
+
+
+
+## Required
+- [x] User should see the app icon 
+- [x] User should see a splash screen
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
+- [x] Push code to GitHub
+## Optional
+- [ ] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [ ] User should see all views properly layout when using the app on a phone of different sizes
+- [ ] Correct answer in multiple choice should be random
+
 ## Lab 3
 
 ### App Description
